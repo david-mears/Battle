@@ -9,6 +9,7 @@ class Battle < Sinatra::Base
   post '/names' do
     player_1_name = params['Player 1']
     player_2_name = params['Player 2']
+    p params
     erb :play, { locals: { player_1_name: player_1_name, player_2_name: player_2_name } }
   end
 
