@@ -18,6 +18,10 @@ class Battle < Sinatra::Base
     erb :play, { locals: { player_1_name: session['player_1_name'], player_2_name: session['player_2_name'] } }
   end
 
+  get '/attack' do
+    erb :attack, { locals: { player_1_name: session['player_1_name'], player_2_name: session['player_2_name'] } }
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
